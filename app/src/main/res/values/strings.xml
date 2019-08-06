@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Pocket</string>
+
+    <string name="acctxt1">ACCOUNT</string>
+
     <string name="amount">Amount</string>
     <string name="enter_amount">Enter Amount</string>
     <string name="category">Category</string>
@@ -13,4 +16,21 @@
     <string name="write_something">Write Something...</string>
     <string name="save">Save</string>
     <string name="expenses">Expenses</string>
+    <string name="accbtn1">Add Account</string>
+    <string name="acttxt2">Name</string>
+    <string name="acttxt3">Account No</string>
+    <string name="acctxt4">Type</string>
+    <string name="acctxt5">Amount</string>
+    <string name="actbox1">Enter Account Name</string>
+    <string name="accttxt6">Bank</string>
+    <string name="actbox2">Enter Bank Name</string>
+    <string name="actbox3">Enter Balance</string>
+    <string name="actbox4">Enter Account No</string>
+    <string name="actbox5">Select Account Type</string>
+
+    <string name="type_prompt">Choose account type</string>
+    <string-array name="spinner2">
+        <item>Savings</item>
+        <item>Fixed Deposits</item>
+    </string-array>
 </resources>
