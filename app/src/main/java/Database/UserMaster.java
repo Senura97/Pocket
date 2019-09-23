@@ -2,9 +2,14 @@ package Database;
 
 import android.provider.BaseColumns;
 
+import com.example.pocket.login;
+
 public final class UserMaster {
 
-    private UserMaster() {}
+    public UserMaster() {}
+
+    public UserMaster(login login) {
+    }
 
     protected static class Users implements BaseColumns{
 
@@ -16,6 +21,18 @@ public final class UserMaster {
         public static final String COLUMN_NAME_AMOUNT = "amount";
         public static final String COLUMN_NAME_TYPE = "type";
 
+
+
+        public static final String TABLE2_NAME = "user";
+        public static final String COLUMN_NAME_EMAIL = "email";
+        public static final String COLUMN_NAME_PASSWORD = "password";
+
     }
+
+
+
+
+
+
 
 }

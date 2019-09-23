@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".ui.login.userlogin"
-            android:label="@string/title_activity_userlogin"></activity>
+        <activity android:name=".login" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
         <activity android:name=".Expenses" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -20,10 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".viewaccounts">
-
-        </activity>
+        <activity android:name=".viewaccounts"></activity>
         <activity android:name=".account" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 

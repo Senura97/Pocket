@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/viewActBk"
+            android:layout_width="50dp"
+            android:layout_marginTop="2dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="291dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/acctxt1"
+            android:textSize="19dp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/searchFilter"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
 
     <ListView
         android:id="@+id/acc_list"
         android:layout_width="507dp"
-        android:layout_height="581dp"
+        android:layout_height="415dp"
         android:dividerHeight="1dp" />
 
     <Button
         android:id="@+id/addact"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
