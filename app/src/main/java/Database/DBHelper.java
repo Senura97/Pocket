@@ -84,7 +84,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         long newRowId1 = db.insert(TABLE2_NAME,null,values1);
 
-        if(newRowId1 >= 1)
+        if(newRowId1 > 0)
             return true;
         else
             return false;

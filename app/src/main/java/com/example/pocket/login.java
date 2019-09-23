@@ -45,12 +45,11 @@ public class login extends AppCompatActivity {
 
                 SQLiteDatabase db = mDBHelper.getReadableDatabase();
 
-                //if(validateLogin()==true){
-                    Cursor c = db.rawQuery("SELECT * FROM user WHERE email= "
+                if(validateLogin()==true){
+                    Cursor c = db.rawQuery("SELECT * FROM user WHERE email='"
                                     + email.getText().toString().trim() + "'" +
                                     "AND password='"+password.getText().toString().trim()+"'"
                             , null);
-
                     if (c.moveToFirst()) {
 
                         String loginEmail = c.getString(1);
@@ -58,6 +57,9 @@ public class login extends AppCompatActivity {
 
                         Intent intent = new Intent(login.this, MainActivity.class);
                         intent.putExtra("key_email", loginEmail);
+
+                        Toast t = Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT);
+                        t.show();
 
                         startActivity(intent);
                         clearText();
@@ -68,7 +70,7 @@ public class login extends AppCompatActivity {
                         clearText();
                     }
                 }
-            //}
+            }
         });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
