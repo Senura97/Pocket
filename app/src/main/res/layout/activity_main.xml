@@ -4,5 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/BackgroundImage"
-    tools:context=".MainActivity"/>
+    android:background="@drawable/dash"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageViewMain"
+        android:layout_width="318dp"
+        android:layout_height="425dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.91"
+        app:srcCompat="@drawable/logo1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
