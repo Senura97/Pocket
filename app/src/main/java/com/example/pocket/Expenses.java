@@ -1,7 +1,6 @@
 package com.example.pocket;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.DialogFragment;
 
 import android.os.Bundle;
@@ -43,11 +42,11 @@ public class Expenses extends AppCompatActivity implements View.OnClickListener{
         createBottomSheetDialog();
 
         dbHelper = new DBHelper( this);
-        addExp = (Button)findViewById(R.id.addExp);
+        addExp = (Button)findViewById(R.id.addBudget);
         categorychange = (TextView)findViewById(R.id.categorychange);
         amountText = (EditText)findViewById(R.id.amountText);
         dateText = (EditText)findViewById(R.id.dateText);
-        noteText = (EditText)findViewById(R.id.noteText);
+        noteText = (EditText)findViewById(R.id.ammountPick);
 
     }
 
@@ -257,7 +256,7 @@ public class Expenses extends AppCompatActivity implements View.OnClickListener{
         }
 
             switch (view.getId()){
-                case R.id.addExp:
+                case R.id.addBudget:
                     addExpenses();
                     break;
         }
