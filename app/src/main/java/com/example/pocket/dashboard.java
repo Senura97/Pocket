@@ -19,29 +19,40 @@ public class dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        incomeCardView = findViewById(R.id.incomeCardView);
+        incomeCardView = (CardView) findViewById(R.id.incomeCardView);
         expensesCardView = (CardView) findViewById(R.id.expensesCardView);
-        accountsCardView = findViewById(R.id.accountsCardView);
-        budgetCardView = findViewById(R.id.budgetCardView);
+        accountsCardView = (CardView) findViewById(R.id.accountsCardView);
+        budgetCardView = (CardView) findViewById(R.id.budgetCardView);
+
+        /*incomeCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(dashboard.this, .class));
+            }
+        });
+
+        incomeCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(dashboard.this, .class));
+            }
+        });
+
+        incomeCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(dashboard.this, .class));
+            }
+        });*/
 
         expensesCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openExpenses();
+                startActivity(new Intent(dashboard.this, buttonpage.class));
             }
         });
 
-        /*expensesCardView.setOnClickListener();{
-            startActivity(new Intent(dashboard.this,Expenses.class));
-
-        });*/
 
     }
 
-
-    private void openExpenses() {
-
-        Intent intent = new Intent(this, Expenses.class);
-        startActivity(intent);
-    }
 }

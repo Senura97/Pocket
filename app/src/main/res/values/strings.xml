@@ -12,4 +12,7 @@
     <string name="savechanges">Save Changes</string>
     <string name="cancel">Cancel</string>
     <string name="addExpense">ADD EXPENSES</string>
+    <string name="showexpenses">EXPENSES LIST</string>
+    <string name="searchexp">Search Here</string>
+    <string name="quote">- See Where Your Money Goes -</string>
 </resources>

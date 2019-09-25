@@ -37,7 +37,7 @@ public class Expenses extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_expenses);
 
         dateText = (EditText)findViewById(R.id.dateText);
-        //categorychange = findViewById(R.id.categorychange);
+        categorychange = findViewById(R.id.categorychange);
         categorySelector = findViewById(R.id.categorySelector);
 
         createBottomSheetDialog();
@@ -48,6 +48,31 @@ public class Expenses extends AppCompatActivity implements View.OnClickListener{
         amountText = (EditText)findViewById(R.id.amountText);
         dateText = (EditText)findViewById(R.id.dateText);
         noteText = (EditText)findViewById(R.id.noteText);
+
+        addExp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addExpenses();
+            }
+        });
+
+        addExp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               if(categorychange.length()==0){
+                   categorychange.setError("Select Category");
+               }
+               else if (amountText.length()==0){
+                   amountText.setError("Enter Amount");
+               }
+               else if (dateText.length()==0){
+                   dateText.setError("Select Date");
+               }
+               else if(noteText.length()==0){
+                   noteText.setError("Enter Note");
+               }
+            }
+        });
 
     }
 
@@ -263,6 +288,8 @@ public class Expenses extends AppCompatActivity implements View.OnClickListener{
         }
 
     }
+
+
 
     public void addExpenses(){
 
