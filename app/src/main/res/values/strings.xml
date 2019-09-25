@@ -3,14 +3,13 @@
     <string name="amount">Amount</string>
     <string name="enter_amount">Enter Amount</string>
     <string name="category">Category</string>
-    <string name="select_category">Select Category</string>
     <string name="date">Date</string>
     <string name="choose_date">Choose Date</string>
-    <string name="payment_method">Payment Method</string>
-    <string name="cash">Cash</string>
-    <string name="credit_card">Credit Card</string>
     <string name="note">Note</string>
     <string name="write_something">Write Something...</string>
-    <string name="save">Save</string>
-    <string name="expenses">Expenses</string>
+    <string name="expenseslist">EXPENSES</string>
+    <string name="editExpenses">EDIT EXPENSES</string>
+    <string name="savechanges">Save Changes</string>
+    <string name="cancel">Cancel</string>
+    <string name="addExpense">ADD EXPENSES</string>
 </resources>

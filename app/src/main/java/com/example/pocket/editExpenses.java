@@ -6,48 +6,31 @@ import androidx.fragment.app.DialogFragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-import Database.DBHelper;
+public class editExpenses extends AppCompatActivity implements View.OnClickListener {
 
-public class Expenses extends AppCompatActivity implements View.OnClickListener{
-
-    public static EditText dateText;
     BottomSheetDialog bottomSheetDialog;
+    TextView categorychange;
     ImageButton categorySelector;
     LinearLayout auto, charity, childcare, clothing, eatingout, education, entertainment, groceries, healthFitness, medical, rent, tax, pets, transport, travel, utilities, household, insurance, cash, creditcard;
-    TextView categorychange;
-    Button addExp;
-    EditText amountText, noteText;
-    DBHelper dbHelper;
-
+    public static EditText dateText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expenses);
+        setContentView(R.layout.activity_edit_expenses);
 
         dateText = (EditText)findViewById(R.id.dateText);
-        //categorychange = findViewById(R.id.categorychange);
+        categorychange = findViewById(R.id.categorychange);
         categorySelector = findViewById(R.id.categorySelector);
 
         createBottomSheetDialog();
-
-        dbHelper = new DBHelper( this);
-        addExp = (Button)findViewById(R.id.addBudget);
-        categorychange = (TextView)findViewById(R.id.categorychange);
-        amountText = (EditText)findViewById(R.id.amountText);
-        dateText = (EditText)findViewById(R.id.dateText);
-        noteText = (EditText)findViewById(R.id.ammountPick);
-
     }
 
 
@@ -117,14 +100,8 @@ public class Expenses extends AppCompatActivity implements View.OnClickListener{
 
     }
 
-    public void showDialog(View view) {
-
-        bottomSheetDialog.show();
-    }
-
     @Override
     public void onClick(View view) {
-
         switch (view.getId()) {
             case R.id.auto:
                 categorychange.setText("Auto");
@@ -255,36 +232,11 @@ public class Expenses extends AppCompatActivity implements View.OnClickListener{
 
         }
 
-            switch (view.getId()){
-                case R.id.addBudget:
-                    addExpenses();
-                    break;
-        }
-
     }
 
-    public void addExpenses(){
+    public void showDialog(View view) {
 
-        String etype = categorychange.getText().toString();
-        String eamount = amountText.getText().toString();
-        String edate = dateText.getText().toString();
-        String enote = noteText.getText().toString();
-
-        if(!etype.equals("") && !(eamount==null) && !edate.equals("") && !enote.equals("")){
-            if(dbHelper.addInfo(etype,eamount,edate,enote)){
-                Toast t = Toast.makeText(getApplicationContext(),"Successfully Inserted Expense",Toast.LENGTH_SHORT);
-                t.show();
-            }
-            else{
-                Toast t = Toast.makeText(getApplicationContext(),"Cannot Insert Expense",Toast.LENGTH_SHORT);
-                t.show();
-            }
-        }
-        else{
-            Toast t = Toast.makeText(getApplicationContext(),"Empty Fields",Toast.LENGTH_SHORT);
-            t.show();
-        }
-
+        bottomSheetDialog.show();
     }
 
 
